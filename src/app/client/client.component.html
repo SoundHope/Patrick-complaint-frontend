@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+    <h2><b class="currier_font">Reportes De Incidencias</b></h2>
+    <br>
+    <img src="https://www.bancointernacional.com.ec/storage/2020/10/empleo-internacional.jpg" style="width: 10%;">
+    <br>
+    <br>
+    <span class="currier_font">Ingresa Tu numero de cedula para continuar</span>
+    <br>
+    <br>
+    <form #clientlogin="ngForm" (ngSubmit)="onClickSubmitDniForm(clientlogin.value)">
+      <input pInputText name="dni" pKeyFilter="int" placeholder="CI.." [ngModel] />
+      <br>
+      <br>
+      <p-button label="Continuar" type="Submit" ></p-button>
+    </form>
+    <p style="color:rgb(183, 40, 40)" *ngIf="findUserNotSuces">El Dni Ingresado No Es Valido, Verificalo e intentalo
+      nuevamente.</p>
+  </div>

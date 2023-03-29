@@ -1,0 +1,25 @@
+<div style="text-align: center;">
+    <div style="padding-left: 40%; padding-top: 2%;">
+        <p-card header="Generar Solicitud"
+            subheader=""
+            [style]="{ width: '40%'}">
+            <div>
+                <h3>Hola {{name}} {{lastName}} Cuéntanos sobre el problema para poder mejorar nuestro servicio para ti! :)</h3>
+            </div>
+            <form #clientlogin="ngForm" (ngSubmit)="onClickSubmit(clientlogin.value)">
+                <div>
+                    <div style="text-align: justify;">
+                        <label for="type">Selecciona Un Tipo De Incidencia:</label><br><br>
+                        <p-dropdown name="type" id="type" [options]="types" [ngModel] optionLabel="name" optionValue="name"></p-dropdown><br><br>
+                        <label for="type">Describe tu incidencia:</label><br><br>
+                        <textarea name="detail" id="detail" cols="45" rows="10" required pInputTextarea
+                            [ngModel]></textarea>
+                    </div>
+                    <br>
+                    <p-button label="Continuar" type="submit"></p-button>
+                </div>
+            </form>
+        </p-card>
+
+    </div>
+</div>
